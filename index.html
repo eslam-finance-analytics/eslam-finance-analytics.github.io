@@ -1,20 +1,23 @@
 <!doctype html>
 <html lang="en" dir="ltr">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Eslam Mohamed Gamal - Data Analyst &amp; Accountant Portfolio">
   <meta property="og:title" content="Eslam Mohamed Gamal - Data Analyst &amp; Accountant">
   <meta property="og:description" content="Transforming numbers into actionable insights">
   <title>Eslam Mohamed Gamal | Data Analyst &amp; Accountant</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Poppins:wght@300;400;500;600&amp;family=Tajawal:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Poppins:wght@300;400;500;600&amp;family=Tajawal:wght@300;400;500;700&amp;display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <style>
     body {
       box-sizing: border-box;
     }
-    
+
     :root {
       --bg-primary: #0A0E17;
       --bg-secondary: #0F172A;
@@ -28,21 +31,21 @@
       --text-primary: #FFFFFF;
       --text-secondary: #F8FAFC;
       --text-tertiary: #CBD5E1;
-      --glass: rgba(255,255,255,0.08);
-      --glass-border: rgba(255,255,255,0.12);
+      --glass: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.12);
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     html {
       scroll-behavior: smooth;
       height: 100%;
     }
-    
+
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--bg-primary);
@@ -50,19 +53,19 @@
       min-height: 100%;
       overflow-x: hidden;
     }
-    
+
     body[dir="rtl"] {
       font-family: 'Tajawal', sans-serif;
     }
-    
+
     .font-heading {
       font-family: 'Montserrat', sans-serif;
     }
-    
+
     [dir="rtl"] .font-heading {
       font-family: 'Tajawal', sans-serif;
     }
-    
+
     .glass-card {
       background: var(--glass);
       backdrop-filter: blur(12px);
@@ -70,23 +73,23 @@
       border: 1px solid var(--glass-border);
       border-radius: 20px;
     }
-    
+
     .gold-gradient {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-bright), var(--gold-light));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .gold-border {
       border: 3px solid var(--gold-bright);
       box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
     }
-    
+
     .gold-glow {
       box-shadow: 0 0 40px rgba(245, 158, 11, 0.4), 0 0 80px rgba(245, 158, 11, 0.2);
     }
-    
+
     .btn-gold {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-bright));
       color: var(--bg-primary);
@@ -101,12 +104,12 @@
       align-items: center;
       gap: 8px;
     }
-    
+
     .btn-gold:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 40px rgba(245, 158, 11, 0.5);
     }
-    
+
     .btn-outline {
       background: transparent;
       border: 2px solid var(--gold-bright);
@@ -121,60 +124,67 @@
       gap: 8px;
       font-weight: 500;
     }
-    
+
     .btn-outline:hover {
       background: var(--gold-bright);
       color: var(--bg-primary);
       transform: translateY(-3px);
     }
-    
+
     .section {
       padding: 100px 5%;
       max-width: 1400px;
       margin: 0 auto;
     }
-    
+
     .section-title {
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 800;
       margin-bottom: 60px;
       text-align: center;
     }
-    
+
     .floating {
       animation: float 6s ease-in-out infinite;
     }
-    
+
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
-    
+
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.8s ease;
     }
-    
+
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
-    
+
     .progress-bar {
       height: 10px;
       background: var(--bg-tertiary);
       border-radius: 10px;
       overflow: hidden;
     }
-    
+
     .progress-fill {
       height: 100%;
       border-radius: 10px;
       width: 0;
       transition: width 1.5s ease;
     }
-    
+
     .nav-link {
       position: relative;
       color: var(--text-secondary);
@@ -182,11 +192,12 @@
       padding: 8px 16px;
       transition: color 0.3s ease;
     }
-    
-    .nav-link:hover, .nav-link.active {
+
+    .nav-link:hover,
+    .nav-link.active {
       color: var(--gold-bright);
     }
-    
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -198,22 +209,23 @@
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
-    
-    .nav-link:hover::after, .nav-link.active::after {
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
       width: 80%;
     }
-    
+
     .timeline-item {
       position: relative;
       padding-left: 40px;
       margin-bottom: 40px;
     }
-    
+
     [dir="rtl"] .timeline-item {
       padding-left: 0;
       padding-right: 40px;
     }
-    
+
     .timeline-item::before {
       content: '';
       position: absolute;
@@ -225,12 +237,12 @@
       border-radius: 50%;
       box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
     }
-    
+
     [dir="rtl"] .timeline-item::before {
       left: auto;
       right: 0;
     }
-    
+
     .timeline-item::after {
       content: '';
       position: absolute;
@@ -240,16 +252,16 @@
       height: calc(100% + 20px);
       background: linear-gradient(to bottom, var(--gold-bright), transparent);
     }
-    
+
     [dir="rtl"] .timeline-item::after {
       left: auto;
       right: 7px;
     }
-    
+
     .timeline-item:last-child::after {
       display: none;
     }
-    
+
     .cert-card {
       background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
       border: 1px solid var(--glass-border);
@@ -258,13 +270,13 @@
       text-align: center;
       transition: all 0.3s ease;
     }
-    
+
     .cert-card:hover {
       transform: translateY(-8px);
       border-color: var(--gold-bright);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
-    
+
     .tech-icon {
       width: 60px;
       height: 60px;
@@ -277,13 +289,13 @@
       transition: all 0.3s ease;
       border: 1px solid var(--glass-border);
     }
-    
+
     .tech-icon:hover {
       transform: scale(1.1) rotate(5deg);
       border-color: var(--gold-bright);
       box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
     }
-    
+
     .project-card {
       background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 1px solid var(--glass-border);
@@ -291,13 +303,13 @@
       overflow: hidden;
       transition: all 0.4s ease;
     }
-    
+
     .project-card:hover {
       transform: translateY(-10px);
       border-color: var(--gold-bright);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
     }
-    
+
     .project-image {
       width: 100%;
       height: 280px;
@@ -309,13 +321,13 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .project-image img {
       width: 100%;
       height: 100%;
       object-fit: fill;
     }
-    
+
     .chart-bar {
       height: 24px;
       background: var(--bg-tertiary);
@@ -323,7 +335,7 @@
       overflow: hidden;
       margin-bottom: 12px;
     }
-    
+
     .chart-fill {
       height: 100%;
       border-radius: 12px;
@@ -334,7 +346,7 @@
       font-weight: 600;
       color: var(--bg-primary);
     }
-    
+
     .hamburger {
       display: none;
       flex-direction: column;
@@ -342,7 +354,7 @@
       cursor: pointer;
       padding: 10px;
     }
-    
+
     .hamburger span {
       width: 28px;
       height: 3px;
@@ -350,7 +362,7 @@
       border-radius: 3px;
       transition: all 0.3s ease;
     }
-    
+
     .mobile-menu {
       display: none;
       position: fixed;
@@ -363,11 +375,11 @@
       z-index: 999;
       border-bottom: 1px solid var(--glass-border);
     }
-    
+
     .mobile-menu.active {
       display: block;
     }
-    
+
     .mobile-menu a {
       display: block;
       padding: 16px 0;
@@ -377,11 +389,11 @@
       border-bottom: 1px solid var(--glass-border);
       transition: color 0.3s ease;
     }
-    
+
     .mobile-menu a:hover {
       color: var(--gold-bright);
     }
-    
+
     .toast {
       position: fixed;
       bottom: 30px;
@@ -396,12 +408,12 @@
       opacity: 0;
       transition: all 0.4s ease;
     }
-    
+
     .toast.show {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
-    
+
     .contact-icon {
       width: 70px;
       height: 70px;
@@ -414,26 +426,26 @@
       cursor: pointer;
       text-decoration: none;
     }
-    
+
     .contact-icon:hover {
       transform: scale(1.1);
     }
-    
+
     .whatsapp-icon {
       background: linear-gradient(135deg, #25D366, #128C7E);
       color: white;
     }
-    
+
     .email-icon {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-bright));
       color: var(--bg-primary);
     }
-    
+
     .linkedin-icon {
       background: linear-gradient(135deg, #0077B5, #00A0DC);
       color: white;
     }
-    
+
     .back-to-top {
       position: fixed;
       bottom: 30px;
@@ -454,22 +466,22 @@
       font-size: 24px;
       border: none;
     }
-    
+
     [dir="rtl"] .back-to-top {
       right: auto;
       left: 30px;
     }
-    
+
     .back-to-top.visible {
       opacity: 1;
       visibility: visible;
     }
-    
+
     .back-to-top:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5);
     }
-    
+
     .photo-upload {
       position: relative;
       width: 280px;
@@ -481,17 +493,17 @@
       transition: all 0.3s ease;
       box-shadow: 0 0 50px rgba(245, 158, 11, 0.3);
     }
-    
+
     .photo-upload:hover {
       box-shadow: 0 0 80px rgba(245, 158, 11, 0.5);
     }
-    
+
     .photo-upload img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    
+
     .photo-placeholder {
       width: 100%;
       height: 100%;
@@ -503,13 +515,13 @@
       gap: 12px;
       color: var(--text-tertiary);
     }
-    
+
     .photo-placeholder svg {
       width: 80px;
       height: 80px;
       opacity: 0.5;
     }
-    
+
     .upload-dashboard-btn {
       cursor: pointer;
       display: inline-flex;
@@ -524,12 +536,12 @@
       transition: all 0.3s ease;
       text-decoration: none;
     }
-    
+
     .upload-dashboard-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 40px rgba(245, 158, 11, 0.5);
     }
-    
+
     .dashboard-preview {
       background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
       border: 3px solid var(--gold-bright);
@@ -540,65 +552,67 @@
       background-size: cover;
       background-position: center;
     }
-    
+
     .dashboard-preview:hover {
       transform: scale(1.05);
       box-shadow: 0 0 50px rgba(245, 158, 11, 0.5);
     }
-    
+
     .dashboard-preview.has-image {
       background-size: cover !important;
     }
-    
+
     @media (max-width: 1024px) {
       .nav-links {
         display: none;
       }
-      
+
       .hamburger {
         display: flex;
       }
-      
+
       .hero-content {
         flex-direction: column;
         text-align: center;
       }
-      
+
       .section {
         padding: 60px 5%;
       }
     }
-    
+
     @media (max-width: 768px) {
       .section-title {
         font-size: 1.8rem;
         margin-bottom: 40px;
       }
-      
+
       .photo-upload {
         width: 200px;
         height: 200px;
       }
-      
+
       .tech-stack {
         justify-content: center;
       }
-      
+
       .cta-buttons {
         flex-direction: column;
         align-items: center;
       }
-      
-      .about-grid, .skills-grid, .cert-grid {
+
+      .about-grid,
+      .skills-grid,
+      .cert-grid {
         grid-template-columns: 1fr;
       }
-      
+
       .contact-icons {
         flex-direction: column;
         align-items: center;
       }
     }
-    
+
     .particles {
       position: fixed;
       top: 0;
@@ -609,7 +623,7 @@
       z-index: 0;
       overflow: hidden;
     }
-    
+
     .particle {
       position: absolute;
       width: 4px;
@@ -619,101 +633,138 @@
       opacity: 0.3;
       animation: particleFloat 15s infinite linear;
     }
-    
+
     @keyframes particleFloat {
       0% {
         transform: translateY(100%) translateX(0);
         opacity: 0;
       }
+
       10% {
         opacity: 0.3;
       }
+
       90% {
         opacity: 0.3;
       }
+
       100% {
         transform: translateY(-100%) translateX(100px);
         opacity: 0;
       }
     }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body><!-- Particles Background -->
+</head>
+
+<body><!-- Particles Background -->
   <div class="particles" id="particles"></div><!-- Navigation -->
-  <nav class="glass-card fixed top-0 left-0 right-0 z-50" style="border-radius: 0; border-top: none; border-left: none; border-right: none;">
-   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#hero" class="font-heading font-bold text-2xl gold-gradient">EMG</a>
-    <div class="nav-links hidden lg:flex items-center gap-2"><a href="#hero" class="nav-link active" data-lang-key="nav_home">Home</a> <a href="#about" class="nav-link" data-lang-key="nav_about">About</a> <a href="#experience" class="nav-link" data-lang-key="nav_experience">Experience</a> <a href="#skills" class="nav-link" data-lang-key="nav_skills">Skills</a> <a href="#projects" class="nav-link" data-lang-key="nav_projects">Projects</a> <a href="#certifications" class="nav-link" data-lang-key="nav_certifications">Certifications</a> <a href="#contact" class="nav-link" data-lang-key="nav_contact">Contact</a>
+  <nav class="glass-card fixed top-0 left-0 right-0 z-50"
+    style="border-radius: 0; border-top: none; border-left: none; border-right: none;">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#hero"
+        class="font-heading font-bold text-2xl gold-gradient">EMG</a>
+      <div class="nav-links hidden lg:flex items-center gap-2"><a href="#hero" class="nav-link active"
+          data-lang-key="nav_home">Home</a> <a href="#about" class="nav-link" data-lang-key="nav_about">About</a> <a
+          href="#experience" class="nav-link" data-lang-key="nav_experience">Experience</a> <a href="#skills"
+          class="nav-link" data-lang-key="nav_skills">Skills</a> <a href="#projects" class="nav-link"
+          data-lang-key="nav_projects">Projects</a> <a href="#certifications" class="nav-link"
+          data-lang-key="nav_certifications">Certifications</a> <a href="#contact" class="nav-link"
+          data-lang-key="nav_contact">Contact</a>
+      </div>
+      <div class="flex items-center gap-4"><button id="langToggle"
+          class="glass-card px-4 py-2 text-sm font-medium hover:border-amber-500 transition-all cursor-pointer"
+          style="border-radius: 50px;"> 🌐 <span id="langText">العربية</span> </button> <a href="#contact"
+          class="btn-gold hidden sm:flex" data-lang-key="nav_cta">💬 Contact</a>
+        <div class="hamburger" id="hamburger"><span></span> <span></span> <span></span>
+        </div>
+      </div>
     </div>
-    <div class="flex items-center gap-4"><button id="langToggle" class="glass-card px-4 py-2 text-sm font-medium hover:border-amber-500 transition-all cursor-pointer" style="border-radius: 50px;"> 🌐 <span id="langText">العربية</span> </button> <a href="#contact" class="btn-gold hidden sm:flex" data-lang-key="nav_cta">💬 Contact</a>
-     <div class="hamburger" id="hamburger"><span></span> <span></span> <span></span>
-     </div>
-    </div>
-   </div>
   </nav><!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu"><a href="#hero" data-lang-key="nav_home">Home</a> <a href="#about" data-lang-key="nav_about">About</a> <a href="#experience" data-lang-key="nav_experience">Experience</a> <a href="#skills" data-lang-key="nav_skills">Skills</a> <a href="#projects" data-lang-key="nav_projects">Projects</a> <a href="#certifications" data-lang-key="nav_certifications">Certifications</a> <a href="#contact" data-lang-key="nav_contact">Contact</a>
+  <div class="mobile-menu" id="mobileMenu"><a href="#hero" data-lang-key="nav_home">Home</a> <a href="#about"
+      data-lang-key="nav_about">About</a> <a href="#experience" data-lang-key="nav_experience">Experience</a> <a
+      href="#skills" data-lang-key="nav_skills">Skills</a> <a href="#projects" data-lang-key="nav_projects">Projects</a>
+    <a href="#certifications" data-lang-key="nav_certifications">Certifications</a> <a href="#contact"
+      data-lang-key="nav_contact">Contact</a>
   </div><!-- Hero Section -->
   <section id="hero" class="section min-h-screen flex items-center pt-32">
-   <div class="hero-content flex flex-col lg:flex-row items-center gap-16 w-full">
-    <div class="photo-upload floating" id="photoUpload">
-     <div class="photo-placeholder" id="photoPlaceholder">
-    <img id="profileImage" src="img/الصورة الشخصيه.jpg" alt="Profile" >
-     </div> 
-     
+    <div class="hero-content flex flex-col lg:flex-row items-center gap-16 w-full">
+      <div class="photo-upload floating" id="photoUpload">
+        <div class="photo-placeholder" id="photoPlaceholder">
+          <img id="profileImage" src="img/الصورة الشخصيه.jpg" alt="Profile">
+        </div>
+
+      </div>
+      <div class="flex-1 text-center lg:text-left">
+        <p class="text-xl text-amber-400 mb-4 fade-in" id="heroGreeting" data-lang-key="hero_greeting">👋 Hello, I'm</p>
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 gold-gradient fade-in"
+          id="heroTitle">Eslam Mohamed Gamal</h1>
+        <h2 class="text-xl sm:text-2xl text-slate-300 mb-6 fade-in" id="heroSubtitle" data-lang-key="hero_subtitle">Data
+          Analyst &amp; Accountant</h2>
+        <p class="text-lg text-slate-400 mb-10 max-w-xl fade-in" id="heroTagline" data-lang-key="hero_tagline">
+          "Transforming numbers into actionable insights"</p>
+        <div class="tech-stack flex flex-wrap gap-4 mb-10 fade-in">
+          <div class="tech-icon" title="Excel">
+            📊
+          </div>
+          <div class="tech-icon" title="Power BI">
+            📈
+          </div>
+          <div class="tech-icon" title="SQL">
+            🗃️
+          </div>
+          <div class="tech-icon" title="Python">
+            🐍
+          </div>
+        </div>
+        <div class="cta-buttons flex flex-wrap gap-4 fade-in"><a href="#projects" class="btn-gold"
+            data-lang-key="cta_projects">🚀 View Projects</a> <a href="#about" class="btn-outline"
+            data-lang-key="cta_about">ℹ️ About Me</a> <a href="#contact" class="btn-outline"
+            data-lang-key="cta_contact">💬 Contact</a>
+        </div>
+      </div>
     </div>
-    <div class="flex-1 text-center lg:text-left">
-     <p class="text-xl text-amber-400 mb-4 fade-in" id="heroGreeting" data-lang-key="hero_greeting">👋 Hello, I'm</p>
-     <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 gold-gradient fade-in" id="heroTitle">Eslam Mohamed Gamal</h1>
-     <h2 class="text-xl sm:text-2xl text-slate-300 mb-6 fade-in" id="heroSubtitle" data-lang-key="hero_subtitle">Data Analyst &amp; Accountant</h2>
-     <p class="text-lg text-slate-400 mb-10 max-w-xl fade-in" id="heroTagline" data-lang-key="hero_tagline">"Transforming numbers into actionable insights"</p>
-     <div class="tech-stack flex flex-wrap gap-4 mb-10 fade-in">
-      <div class="tech-icon" title="Excel">
-       📊
-      </div>
-      <div class="tech-icon" title="Power BI">
-       📈
-      </div>
-      <div class="tech-icon" title="SQL">
-       🗃️
-      </div>
-      <div class="tech-icon" title="Python">
-       🐍
-      </div>
-     </div>
-     <div class="cta-buttons flex flex-wrap gap-4 fade-in"><a href="#projects" class="btn-gold" data-lang-key="cta_projects">🚀 View Projects</a> <a href="#about" class="btn-outline" data-lang-key="cta_about">ℹ️ About Me</a> <a href="#contact" class="btn-outline" data-lang-key="cta_contact">💬 Contact</a>
-     </div>
-    </div>
-   </div>
   </section><!-- About Section -->
   <section id="about" class="section">
-   <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="about_title">About Me</span></h2>
-   <div class="about-grid grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="glass-card p-8 fade-in hover:border-amber-500 transition-all">
-     <div class="text-5xl mb-6">
-      🎓
-     </div>
-     <h3 class="text-xl font-bold mb-4 text-amber-400" data-lang-key="education_title">Education</h3>
-     <p class="text-slate-300" data-lang-key="education_degree">Bachelor of Commerce</p>
-     <p class="text-slate-400" data-lang-key="education_major">Accounting Department</p>
-     <p class="text-slate-500 mt-2" data-lang-key="education_uni">Zagazig University - 2022</p>
+    <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="about_title">About Me</span></h2>
+    <div class="about-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card p-8 fade-in hover:border-amber-500 transition-all">
+        <div class="text-5xl mb-6">
+          🎓
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-amber-400" data-lang-key="education_title">Education</h3>
+        <p class="text-slate-300" data-lang-key="education_degree">Bachelor of Commerce</p>
+        <p class="text-slate-400" data-lang-key="education_major">Accounting Department</p>
+        <p class="text-slate-500 mt-2" data-lang-key="education_uni">Zagazig University - 2022</p>
+      </div>
+      <div class="glass-card p-8 fade-in hover:border-amber-500 transition-all" style="animation-delay: 0.2s;">
+        <div class="text-5xl mb-6">
+          🏆
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-amber-400" data-lang-key="achievements_title">Achievements</h3>
+        <div class="flex flex-wrap gap-3"><span class="px-3 py-1 rounded-full text-sm"
+            style="background: var(--glass); border: 1px solid var(--glass-border);">ICDL</span> <span
+            class="px-3 py-1 rounded-full text-sm"
+            style="background: var(--glass); border: 1px solid var(--glass-border);">PFA</span> <span
+            class="px-3 py-1 rounded-full text-sm"
+            style="background: var(--glass); border: 1px solid var(--glass-border);">DEPI</span> <span
+            class="px-3 py-1 rounded-full text-sm"
+            style="background: var(--glass); border: 1px solid var(--glass-border);">Digital Marketing</span>
+        </div>
+      </div>
+      <div class="glass-card p-8 fade-in hover:border-amber-500 transition-all" style="animation-delay: 0.4s;">
+        <div class="text-5xl mb-6">
+          🎯
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-amber-400" data-lang-key="goal_title">Career Goal</h3>
+        <p class="text-slate-300" data-lang-key="goal_desc">"Support business decisions with advanced analytics and
+          accurate reporting"</p>
+      </div>
     </div>
-    <div class="glass-card p-8 fade-in hover:border-amber-500 transition-all" style="animation-delay: 0.2s;">
-     <div class="text-5xl mb-6">
-      🏆
-     </div>
-     <h3 class="text-xl font-bold mb-4 text-amber-400" data-lang-key="achievements_title">Achievements</h3>
-     <div class="flex flex-wrap gap-3"><span class="px-3 py-1 rounded-full text-sm" style="background: var(--glass); border: 1px solid var(--glass-border);">ICDL</span> <span class="px-3 py-1 rounded-full text-sm" style="background: var(--glass); border: 1px solid var(--glass-border);">PFA</span> <span class="px-3 py-1 rounded-full text-sm" style="background: var(--glass); border: 1px solid var(--glass-border);">DEPI</span> <span class="px-3 py-1 rounded-full text-sm" style="background: var(--glass); border: 1px solid var(--glass-border);">Digital Marketing</span>
-     </div>
-    </div>
-    <div class="glass-card p-8 fade-in hover:border-amber-500 transition-all" style="animation-delay: 0.4s;">
-     <div class="text-5xl mb-6">
-      🎯
-     </div>
-     <h3 class="text-xl font-bold mb-4 text-amber-400" data-lang-key="goal_title">Career Goal</h3>
-     <p class="text-slate-300" data-lang-key="goal_desc">"Support business decisions with advanced analytics and accurate reporting"</p>
-    </div>
-   </div>
   </section><!-- Experience Section -->
 
 <section id="experience" class="section" style="background: linear-gradient(180deg, transparent, rgba(245, 158, 11, 0.03), transparent);">
@@ -853,292 +904,452 @@
     </div>
 
 </section>
-```
 
   <!-- Skills Section -->
   <section id="skills" class="section">
-   <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="skills_title">Skills</span></h2>
-   <div class="skills-grid grid grid-cols-1 lg:grid-cols-2 gap-12">
-    <div class="glass-card p-8 fade-in">
-     <h3 class="text-xl font-bold mb-8 text-amber-400 flex items-center gap-3"><span class="text-2xl">💻</span> <span data-lang-key="tech_skills">Technical Skills</span></h3>
-     <div class="space-y-6">
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium">Microsoft Excel</span> <span class="text-amber-400">95%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="95" style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
-       </div>
+    <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="skills_title">Skills</span></h2>
+    <div class="skills-grid grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="glass-card p-8 fade-in">
+        <h3 class="text-xl font-bold mb-8 text-amber-400 flex items-center gap-3"><span class="text-2xl">💻</span> <span
+            data-lang-key="tech_skills">Technical Skills</span></h3>
+        <div class="space-y-6">
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium">Microsoft Excel</span> <span
+                class="text-amber-400">95%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="95"
+                style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium">Power BI</span> <span
+                class="text-amber-400">80%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="80"
+                style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium">SQL</span> <span
+                class="text-amber-400">70%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="70"
+                style="background: linear-gradient(90deg, var(--green-primary), var(--green-bright));"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium">Python</span> <span
+                class="text-amber-400">60%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="60"
+                style="background: linear-gradient(90deg, var(--purple-accent), #A78BFA);"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium">Power BI</span> <span class="text-amber-400">80%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="80" style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
-       </div>
+      <div class="glass-card p-8 fade-in" style="animation-delay: 0.2s;">
+        <h3 class="text-xl font-bold mb-8 text-amber-400 flex items-center gap-3"><span class="text-2xl">📊</span> <span
+            data-lang-key="accounting_skills">Accounting Skills</span></h3>
+        <div class="space-y-6">
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium">IFRS Standards</span> <span
+                class="text-amber-400">90%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="90"
+                style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium"
+                data-lang-key="financial_analysis">Financial Analysis</span> <span class="text-amber-400">88%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="88"
+                style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium" data-lang-key="cost_accounting">Cost
+                Accounting</span> <span class="text-amber-400">85%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="85"
+                style="background: linear-gradient(90deg, var(--green-primary), var(--green-bright));"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2"><span class="font-medium" data-lang-key="budgeting">Budgeting &amp;
+                Forecasting</span> <span class="text-amber-400">82%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="82"
+                style="background: linear-gradient(90deg, var(--purple-accent), #A78BFA);"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium">SQL</span> <span class="text-amber-400">70%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="70" style="background: linear-gradient(90deg, var(--green-primary), var(--green-bright));"></div>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium">Python</span> <span class="text-amber-400">60%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="60" style="background: linear-gradient(90deg, var(--purple-accent), #A78BFA);"></div>
-       </div>
-      </div>
-     </div>
     </div>
-    <div class="glass-card p-8 fade-in" style="animation-delay: 0.2s;">
-     <h3 class="text-xl font-bold mb-8 text-amber-400 flex items-center gap-3"><span class="text-2xl">📊</span> <span data-lang-key="accounting_skills">Accounting Skills</span></h3>
-     <div class="space-y-6">
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium">IFRS Standards</span> <span class="text-amber-400">90%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="90" style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium" data-lang-key="financial_analysis">Financial Analysis</span> <span class="text-amber-400">88%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="88" style="background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));"></div>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium" data-lang-key="cost_accounting">Cost Accounting</span> <span class="text-amber-400">85%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="85" style="background: linear-gradient(90deg, var(--green-primary), var(--green-bright));"></div>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="flex justify-between mb-2"><span class="font-medium" data-lang-key="budgeting">Budgeting &amp; Forecasting</span> <span class="text-amber-400">82%</span>
-       </div>
-       <div class="progress-bar">
-        <div class="progress-fill" data-width="82" style="background: linear-gradient(90deg, var(--purple-accent), #A78BFA);"></div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
   </section><!-- Projects Section -->
-  <section id="projects" class="section" style="background: linear-gradient(180deg, transparent, rgba(245, 158, 11, 0.03), transparent);">
-   <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="projects_title">Projects</span></h2>
-   <div class="grid grid-cols-1 gap-12"><!-- Project 1 -->
-    <div class="project-card fade-in">
-    
-     <div class="project-image dashboard-preview" id="dashboard-preview-1">
-      <img src="img/مشروع 1.png" alt="">
-     </div>
-     <div class="p-8">
-      <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🚀</span>
-       <div>
-        <h3 class="text-2xl font-bold text-amber-400" data-lang-key="project1_title">Retail Sales Dashboard</h3><span class="text-sm text-slate-500" data-lang-key="project1_tool">Built with Microsoft Excel</span>
-       </div>
-      </div>
-      <div class="mb-6">
-       <h4 class="text-lg font-semibold mb-4 text-slate-300" data-lang-key="project_steps">🔧 Process Steps:</h4>
-       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">1️⃣</span> <span class="text-sm text-slate-400" data-lang-key="step1">Cleaned 2,400 transactions</span>
+  <section id="projects" class="section"
+    style="background: linear-gradient(180deg, transparent, rgba(245, 158, 11, 0.03), transparent);">
+    <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="projects_title">Projects</span>
+    </h2>
+    <div class="grid grid-cols-1 gap-12"><!-- Project 1 -->
+      <div class="project-card fade-in">
+
+        <div class="project-image dashboard-preview" id="dashboard-preview-1">
+          <img src="img/مشروع 1.png" alt="">
         </div>
-        <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">2️⃣</span> <span class="text-sm text-slate-400" data-lang-key="step2">PivotTables &amp; Charts</span>
-        </div>
-        <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">3️⃣</span> <span class="text-sm text-slate-400" data-lang-key="step3">Calculated KPIs</span>
-        </div>
-       </div>
-      </div>
-      <div class="mb-6">
-       <h4 class="text-lg font-semibold mb-4 text-slate-300" data-lang-key="project_analytics">📊 Key Analytics:</h4>
-       <div class="space-y-3">
-        <div>
-         <div class="flex justify-between text-sm mb-1"><span data-lang-key="cairo">Cairo</span> <span class="text-amber-400">85%</span>
-         </div>
-         <div class="chart-bar">
-          <div class="chart-fill" style="width: 85%; background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));">
-           85%
+        <div class="p-8">
+          <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🚀</span>
+            <div>
+              <h3 class="text-2xl font-bold text-amber-400" data-lang-key="project1_title">Retail Sales Dashboard</h3>
+              <span class="text-sm text-slate-500" data-lang-key="project1_tool">Built with Microsoft Excel</span>
+            </div>
           </div>
-         </div>
-        </div>
-        <div>
-         <div class="flex justify-between text-sm mb-1"><span data-lang-key="alexandria">Alexandria</span> <span class="text-amber-400">65%</span>
-         </div>
-         <div class="chart-bar">
-          <div class="chart-fill" style="width: 65%; background: linear-gradient(90deg, var(--green-primary), var(--green-bright));">
-           65%
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold mb-4 text-slate-300" data-lang-key="project_steps">🔧 Process Steps:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">1️⃣</span> <span
+                  class="text-sm text-slate-400" data-lang-key="step1">Cleaned 2,400 transactions</span>
+              </div>
+              <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">2️⃣</span> <span
+                  class="text-sm text-slate-400" data-lang-key="step2">PivotTables &amp; Charts</span>
+              </div>
+              <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">3️⃣</span> <span
+                  class="text-sm text-slate-400" data-lang-key="step3">Calculated KPIs</span>
+              </div>
+            </div>
           </div>
-         </div>
-        </div>
-        <div>
-         <div class="flex justify-between text-sm mb-1"><span data-lang-key="giza">Giza</span> <span class="text-amber-400">50%</span>
-         </div>
-         <div class="chart-bar">
-          <div class="chart-fill" style="width: 50%; background: linear-gradient(90deg, var(--purple-accent), #A78BFA);">
-           50%
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold mb-4 text-slate-300" data-lang-key="project_analytics">📊 Key Analytics:
+            </h4>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-sm mb-1"><span data-lang-key="cairo">Cairo</span> <span
+                    class="text-amber-400">85%</span>
+                </div>
+                <div class="chart-bar">
+                  <div class="chart-fill"
+                    style="width: 85%; background: linear-gradient(90deg, var(--gold-primary), var(--gold-bright));">
+                    85%
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1"><span data-lang-key="alexandria">Alexandria</span> <span
+                    class="text-amber-400">65%</span>
+                </div>
+                <div class="chart-bar">
+                  <div class="chart-fill"
+                    style="width: 65%; background: linear-gradient(90deg, var(--green-primary), var(--green-bright));">
+                    65%
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1"><span data-lang-key="giza">Giza</span> <span
+                    class="text-amber-400">50%</span>
+                </div>
+                <div class="chart-bar">
+                  <div class="chart-fill"
+                    style="width: 50%; background: linear-gradient(90deg, var(--purple-accent), #A78BFA);">
+                    50%
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-         </div>
+          <div class="mb-6 p-4 rounded-xl"
+            style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3);">
+            <h4 class="text-lg font-semibold mb-3 text-amber-400" data-lang-key="project_insights">💡 Key Insights:</h4>
+            <ul class="space-y-2 text-slate-300">
+              <li>📱 <span data-lang-key="insight1">App channel = 35% highest profitability</span></li>
+              <li>👟 <span data-lang-key="insight2">Sneakers = Top revenue category</span></li>
+            </ul>
+          </div>
+
+          <div class="file-name hidden mt-3 text-sm text-green-400" data-project="1"></div>
         </div>
-       </div>
-      </div>
-      <div class="mb-6 p-4 rounded-xl" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3);">
-       <h4 class="text-lg font-semibold mb-3 text-amber-400" data-lang-key="project_insights">💡 Key Insights:</h4>
-       <ul class="space-y-2 text-slate-300">
-        <li>📱 <span data-lang-key="insight1">App channel = 35% highest profitability</span></li>
-        <li>👟 <span data-lang-key="insight2">Sneakers = Top revenue category</span></li>
-       </ul>
-      </div>
-    
-      <div class="file-name hidden mt-3 text-sm text-green-400" data-project="1"></div>
-     </div>
-    </div><!-- Project 2 -->
-    <div class="project-card fade-in" style="animation-delay: 0.2s;">
-     
-     <div class="project-image dashboard-preview" id="dashboard-preview-2">
-     <img src="img/مشروع 2.png" alt="">
-     </div>
-     <div class="p-8">
-      <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🚀</span>
-       <div>
-        <h3 class="text-2xl font-bold text-amber-400" data-lang-key="project2_title">HR Analytics Dashboard</h3><span class="text-sm text-slate-500" data-lang-key="project2_tool">Built with Power BI</span>
-       </div>
-      </div>
-      <div class="mb-6">
-       <h4 class="text-lg font-semibold mb-4 text-slate-300" data-lang-key="project_steps">🔧 Process Steps:</h4>
-       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">1️⃣</span> <span class="text-sm text-slate-400" data-lang-key="hr_step1">Analyzed 500+ employees</span>
+      </div><!-- Project 2 -->
+      <div class="project-card fade-in" style="animation-delay: 0.2s;">
+
+        <div class="project-image dashboard-preview" id="dashboard-preview-2">
+          <img src="img/مشروع 2.png" alt="">
         </div>
-        <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">2️⃣</span> <span class="text-sm text-slate-400" data-lang-key="hr_step2">Turnover prediction model</span>
+        <div class="p-8">
+          <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🚀</span>
+            <div>
+              <h3 class="text-2xl font-bold text-amber-400" data-lang-key="project2_title">HR Analytics Dashboard</h3>
+              <span class="text-sm text-slate-500" data-lang-key="project2_tool">Built with Power BI</span>
+            </div>
+          </div>
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold mb-4 text-slate-300" data-lang-key="project_steps">🔧 Process Steps:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">1️⃣</span> <span
+                  class="text-sm text-slate-400" data-lang-key="hr_step1">Analyzed 500+ employees</span>
+              </div>
+              <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">2️⃣</span> <span
+                  class="text-sm text-slate-400" data-lang-key="hr_step2">Turnover prediction model</span>
+              </div>
+              <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">3️⃣</span> <span
+                  class="text-sm text-slate-400" data-lang-key="hr_step3">Performance metrics</span>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 p-4 rounded-xl"
+            style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3);">
+            <h4 class="text-lg font-semibold mb-3 text-green-400" data-lang-key="hr_insights">💡 Key Insights:</h4>
+            <ul class="space-y-2 text-slate-300">
+              <li>📉 <span data-lang-key="hr_insight1">Reduced turnover by 18%</span></li>
+              <li>📈 <span data-lang-key="hr_insight2">Identified top performers</span></li>
+            </ul>
+          </div>
+
+          <div class="file-name hidden mt-3 text-sm text-green-400" data-project="2"></div>
         </div>
-        <div class="glass-card p-4 text-center"><span class="text-2xl block mb-2">3️⃣</span> <span class="text-sm text-slate-400" data-lang-key="hr_step3">Performance metrics</span>
+      </div><!-- Project 3 -->
+      <div class="project-card fade-in" style="animation-delay: 0.4s;">
+
+        <div class="project-image dashboard-preview" id="dashboard-preview-3">
+          <img src="img/مشروع 3.png" alt="">
         </div>
-       </div>
-      </div>
-      <div class="mb-6 p-4 rounded-xl" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3);">
-       <h4 class="text-lg font-semibold mb-3 text-green-400" data-lang-key="hr_insights">💡 Key Insights:</h4>
-       <ul class="space-y-2 text-slate-300">
-        <li>📉 <span data-lang-key="hr_insight1">Reduced turnover by 18%</span></li>
-        <li>📈 <span data-lang-key="hr_insight2">Identified top performers</span></li>
-       </ul>
+        <div class="p-8">
+          <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🚀</span>
+            <div>
+              <h3 class="text-2xl font-bold text-amber-400" data-lang-key="project3_title">Financial KPI Dashboard</h3>
+              <span class="text-sm text-slate-500" data-lang-key="project3_tool">Built with Excel &amp; Power BI</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <div class="glass-card p-4 text-center"><span class="text-2xl block text-amber-400 font-bold">$2.4M</span>
+              <span class="text-xs text-slate-400" data-lang-key="total_sales">Total Sales</span>
+            </div>
+            <div class="glass-card p-4 text-center"><span class="text-2xl block text-green-400 font-bold">$580K</span>
+              <span class="text-xs text-slate-400" data-lang-key="net_profit">Net Profit</span>
+            </div>
+            <div class="glass-card p-4 text-center"><span class="text-2xl block text-purple-400 font-bold">24%</span>
+              <span class="text-xs text-slate-400" data-lang-key="profit_margin">Profit Margin</span>
+            </div>
+            <div class="glass-card p-4 text-center"><span class="text-2xl block text-blue-400 font-bold">156</span>
+              <span class="text-xs text-slate-400" data-lang-key="clients">Active Clients</span>
+            </div>
+          </div>
+          <div class="mb-6 p-4 rounded-xl"
+            style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3);">
+            <h4 class="text-lg font-semibold mb-3 text-purple-400" data-lang-key="financial_insights">💡 Key Insights:
+            </h4>
+            <ul class="space-y-2 text-slate-300">
+              <li>📊 <span data-lang-key="fin_insight1">Q4 revenue up 32% YoY</span></li>
+              <li>💵 <span data-lang-key="fin_insight2">Cost reduction of $120K achieved</span></li>
+            </ul>
+          </div>
+
+          <div class="file-name hidden mt-3 text-sm text-green-400" data-project="3"></div>
+        </div>
+      </div><!-- Project 4 -->
+      <div class="project-card fade-in" style="animation-delay: 0.2s;">
+
+        <div class="project-image dashboard-preview" id="dashboard-preview-2">
+          <img src="img/مشروع 4.png" alt="">
+        </div>
+        <div class="p-8">
+
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">📊</span>
+
+            <div>
+              <h3 class="text-2xl font-bold text-amber-400" data-lang-key="project3_title">
+                Sales Performance Dashboard
+              </h3>
+
+              <span class="text-sm text-slate-500" data-lang-key="project3_tool">
+                Built with Excel
+              </span>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold mb-4 text-slate-300" data-lang-key="project_steps">
+              🔧 Process Steps:
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+              <div class="glass-card p-4 text-center">
+                <span class="text-2xl block mb-2">1️⃣</span>
+                <span class="text-sm text-slate-400" data-lang-key="sales_step1">
+                  Cleaned and prepared sales dataset
+                </span>
+              </div>
+
+              <div class="glass-card p-4 text-center">
+                <span class="text-2xl block mb-2">2️⃣</span>
+                <span class="text-sm text-slate-400" data-lang-key="sales_step2">
+                  Built PivotTables and KPIs
+                </span>
+              </div>
+
+              <div class="glass-card p-4 text-center">
+                <span class="text-2xl block mb-2">3️⃣</span>
+                <span class="text-sm text-slate-400" data-lang-key="sales_step3">
+                  Designed interactive dashboard
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="mb-6 p-4 rounded-xl"
+            style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3);">
+
+            <h4 class="text-lg font-semibold mb-3 text-green-400" data-lang-key="sales_insights">
+              💡 Key Insights:
+            </h4>
+
+            <ul class="space-y-2 text-slate-300">
+              <li>
+                📈
+                <span data-lang-key="sales_insight1">
+                  Total Sales exceeded $2.3M across all regions
+                </span>
+              </li>
+
+              <li>
+                💰
+                <span data-lang-key="sales_insight2">
+                  Profit reached $292K with a 12.56% profit margin
+                </span>
+              </li>
+
+              <li>
+                🌎
+                <span data-lang-key="sales_insight3">
+                  West region generated the highest sales contribution
+                </span>
+              </li>
+
+              <li>
+                🏷️
+                <span data-lang-key="sales_insight4">
+                  Discount levels significantly impacted profitability
+                </span>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="file-name hidden mt-3 text-sm text-green-400" data-project="3"></div>
+
+        </div>
       </div>
       
-      <div class="file-name hidden mt-3 text-sm text-green-400" data-project="2"></div>
-     </div>
-    </div><!-- Project 3 -->
-    <div class="project-card fade-in" style="animation-delay: 0.4s;">
 
-     <div class="project-image dashboard-preview" id="dashboard-preview-3">
-      <img src="img/مشروع 3.png" alt="">
-     </div>
-     <div class="p-8">
-      <div class="flex items-center gap-3 mb-4"><span class="text-3xl">🚀</span>
-       <div>
-        <h3 class="text-2xl font-bold text-amber-400" data-lang-key="project3_title">Financial KPI Dashboard</h3><span class="text-sm text-slate-500" data-lang-key="project3_tool">Built with Excel &amp; Power BI</span>
-       </div>
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-       <div class="glass-card p-4 text-center"><span class="text-2xl block text-amber-400 font-bold">$2.4M</span> <span class="text-xs text-slate-400" data-lang-key="total_sales">Total Sales</span>
-       </div>
-       <div class="glass-card p-4 text-center"><span class="text-2xl block text-green-400 font-bold">$580K</span> <span class="text-xs text-slate-400" data-lang-key="net_profit">Net Profit</span>
-       </div>
-       <div class="glass-card p-4 text-center"><span class="text-2xl block text-purple-400 font-bold">24%</span> <span class="text-xs text-slate-400" data-lang-key="profit_margin">Profit Margin</span>
-       </div>
-       <div class="glass-card p-4 text-center"><span class="text-2xl block text-blue-400 font-bold">156</span> <span class="text-xs text-slate-400" data-lang-key="clients">Active Clients</span>
-       </div>
-      </div>
-      <div class="mb-6 p-4 rounded-xl" style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3);">
-       <h4 class="text-lg font-semibold mb-3 text-purple-400" data-lang-key="financial_insights">💡 Key Insights:</h4>
-       <ul class="space-y-2 text-slate-300">
-        <li>📊 <span data-lang-key="fin_insight1">Q4 revenue up 32% YoY</span></li>
-        <li>💵 <span data-lang-key="fin_insight2">Cost reduction of $120K achieved</span></li>
-       </ul>
-      </div>
-    
-      <div class="file-name hidden mt-3 text-sm text-green-400" data-project="3"></div>
-     </div>
     </div>
-   </div>
   </section><!-- Certifications Section -->
   <section id="certifications" class="section">
-   <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="cert_title">Certifications</span></h2>
-   <div class="cert-grid grid grid-cols-2 md:grid-cols-3 gap-6">
-    <div class="cert-card fade-in"><span class="text-4xl mb-4 block">🎓</span>
-     <h3 class="font-bold text-amber-400">ICDL</h3>
-     <p class="text-sm text-slate-400" data-lang-key="cert_icdl">International Computer Driving License</p>
+    <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="cert_title">Certifications</span>
+    </h2>
+    <div class="cert-grid grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="cert-card fade-in"><span class="text-4xl mb-4 block">🎓</span>
+        <h3 class="font-bold text-amber-400">ICDL</h3>
+        <p class="text-sm text-slate-400" data-lang-key="cert_icdl">International Computer Driving License</p>
+      </div>
+      <div class="cert-card fade-in" style="animation-delay: 0.1s;"><span class="text-4xl mb-4 block">📊</span>
+        <h3 class="font-bold text-amber-400">PFA</h3>
+        <p class="text-sm text-slate-400" data-lang-key="cert_pfa">Professional Financial Analysis</p>
+      </div>
+      <div class="cert-card fade-in" style="animation-delay: 0.2s;"><span class="text-4xl mb-4 block">📱</span>
+        <h3 class="font-bold text-amber-400" data-lang-key="cert_dm">Digital Marketing</h3>
+        <p class="text-sm text-slate-400" data-lang-key="cert_dm_desc">Certified Digital Marketer</p>
+      </div>
+      <div class="cert-card fade-in" style="animation-delay: 0.3s;"><span class="text-4xl mb-4 block">🤝</span>
+        <h3 class="font-bold text-amber-400" data-lang-key="cert_sales">Sales</h3>
+        <p class="text-sm text-slate-400" data-lang-key="cert_sales_desc">Sales Professional Certificate</p>
+      </div>
+      <div class="cert-card fade-in" style="animation-delay: 0.4s;"><span class="text-4xl mb-4 block">🎯</span>
+        <h3 class="font-bold text-amber-400" data-lang-key="cert_workshops">Workshops</h3>
+        <p class="text-sm text-slate-400" data-lang-key="cert_workshops_desc">Professional Development</p>
+      </div>
+      <div class="cert-card fade-in" style="animation-delay: 0.5s;"><span class="text-4xl mb-4 block">🏆</span>
+        <h3 class="font-bold text-amber-400">DEPI</h3>
+        <p class="text-sm text-slate-400" data-lang-key="cert_depi">Data Engineering Program</p>
+      </div>
     </div>
-    <div class="cert-card fade-in" style="animation-delay: 0.1s;"><span class="text-4xl mb-4 block">📊</span>
-     <h3 class="font-bold text-amber-400">PFA</h3>
-     <p class="text-sm text-slate-400" data-lang-key="cert_pfa">Professional Financial Analysis</p>
-    </div>
-    <div class="cert-card fade-in" style="animation-delay: 0.2s;"><span class="text-4xl mb-4 block">📱</span>
-     <h3 class="font-bold text-amber-400" data-lang-key="cert_dm">Digital Marketing</h3>
-     <p class="text-sm text-slate-400" data-lang-key="cert_dm_desc">Certified Digital Marketer</p>
-    </div>
-    <div class="cert-card fade-in" style="animation-delay: 0.3s;"><span class="text-4xl mb-4 block">🤝</span>
-     <h3 class="font-bold text-amber-400" data-lang-key="cert_sales">Sales</h3>
-     <p class="text-sm text-slate-400" data-lang-key="cert_sales_desc">Sales Professional Certificate</p>
-    </div>
-    <div class="cert-card fade-in" style="animation-delay: 0.4s;"><span class="text-4xl mb-4 block">🎯</span>
-     <h3 class="font-bold text-amber-400" data-lang-key="cert_workshops">Workshops</h3>
-     <p class="text-sm text-slate-400" data-lang-key="cert_workshops_desc">Professional Development</p>
-    </div>
-    <div class="cert-card fade-in" style="animation-delay: 0.5s;"><span class="text-4xl mb-4 block">🏆</span>
-     <h3 class="font-bold text-amber-400">DEPI</h3>
-     <p class="text-sm text-slate-400" data-lang-key="cert_depi">Data Engineering Program</p>
-    </div>
-   </div>
   </section><!-- Contact Section -->
-  <section id="contact" class="section" style="background: linear-gradient(180deg, transparent, rgba(245, 158, 11, 0.05), transparent);">
-   <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="contact_title">Get In Touch</span></h2>
-   <div class="max-w-4xl mx-auto">
-    <div class="glass-card p-8 md:p-12 fade-in">
-     <div class="text-center mb-10">
-      <p class="text-xl text-slate-300 mb-8" data-lang-key="contact_desc">Ready to transform your data into insights? Let's connect!</p>
-      <div class="contact-icons flex justify-center gap-6 mb-10"><a href="https://wa.me/201128969746" target="_blank" rel="noopener noreferrer" class="contact-icon whatsapp-icon" title="WhatsApp">
-        <svg width="32" height="32" viewbox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg></a> <button class="contact-icon email-icon" id="copyEmail" title="Copy Email">
-        <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /> <polyline points="22,6 12,13 2,6" />
-        </svg></button> <a href="https://linkedin.com/in/eslam-mohamed-gamal" target="_blank" rel="noopener noreferrer" class="contact-icon linkedin-icon" title="LinkedIn">
-        <svg width="32" height="32" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-        </svg></a>
+  <section id="contact" class="section"
+    style="background: linear-gradient(180deg, transparent, rgba(245, 158, 11, 0.05), transparent);">
+    <h2 class="section-title font-heading"><span class="gold-gradient" data-lang-key="contact_title">Get In Touch</span>
+    </h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="glass-card p-8 md:p-12 fade-in">
+        <div class="text-center mb-10">
+          <p class="text-xl text-slate-300 mb-8" data-lang-key="contact_desc">Ready to transform your data into
+            insights? Let's connect!</p>
+          <div class="contact-icons flex justify-center gap-6 mb-10"><a href="https://wa.me/201128969746"
+              target="_blank" rel="noopener noreferrer" class="contact-icon whatsapp-icon" title="WhatsApp">
+              <svg width="32" height="32" viewbox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg></a> <button class="contact-icon email-icon" id="copyEmail" title="Copy Email">
+              <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg></button> <a href="https://linkedin.com/in/eslam-mohamed-gamal" target="_blank"
+              rel="noopener noreferrer" class="contact-icon linkedin-icon" title="LinkedIn">
+              <svg width="32" height="32" viewbox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div class="glass-card p-6 flex items-center gap-4"><span class="text-3xl">📧</span>
+            <div>
+              <p class="text-sm text-slate-400" data-lang-key="email_label">Email</p>
+              <p class="text-amber-400 font-medium" id="emailDisplay">eslamgamal1752000@gmail.com</p>
+            </div>
+          </div>
+          <div class="glass-card p-6 flex items-center gap-4"><span class="text-3xl">📱</span>
+            <div>
+              <p class="text-sm text-slate-400" data-lang-key="phone_label">Phone</p>
+              <p class="text-amber-400 font-medium" id="phoneDisplay">+20 112 896 9746</p>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div><label for="name" class="block text-sm text-slate-400 mb-2" data-lang-key="form_name">Your Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 focus:border-amber-500 focus:outline-none transition-all text-white">
+            </div>
+            <div><label for="email" class="block text-sm text-slate-400 mb-2" data-lang-key="form_email">Your
+                Email</label> <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 focus:border-amber-500 focus:outline-none transition-all text-white">
+            </div>
+          </div>
+          <div><label for="message" class="block text-sm text-slate-400 mb-2"
+              data-lang-key="form_message">Message</label> <textarea id="message" name="message" rows="4" required
+              class="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 focus:border-amber-500 focus:outline-none transition-all text-white resize-none"></textarea>
+          </div><button type="submit" class="btn-gold w-full justify-center"> <span data-lang-key="form_submit">🚀 Send
+              Message</span> </button>
+        </form>
       </div>
-     </div>
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-      <div class="glass-card p-6 flex items-center gap-4"><span class="text-3xl">📧</span>
-       <div>
-        <p class="text-sm text-slate-400" data-lang-key="email_label">Email</p>
-        <p class="text-amber-400 font-medium" id="emailDisplay">eslamgamal1752000@gmail.com</p>
-       </div>
-      </div>
-      <div class="glass-card p-6 flex items-center gap-4"><span class="text-3xl">📱</span>
-       <div>
-        <p class="text-sm text-slate-400" data-lang-key="phone_label">Phone</p>
-        <p class="text-amber-400 font-medium" id="phoneDisplay">+20 112 896 9746</p>
-       </div>
-      </div>
-     </div>
-     <form id="contactForm" class="space-y-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-       <div><label for="name" class="block text-sm text-slate-400 mb-2" data-lang-key="form_name">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 focus:border-amber-500 focus:outline-none transition-all text-white">
-       </div>
-       <div><label for="email" class="block text-sm text-slate-400 mb-2" data-lang-key="form_email">Your Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 focus:border-amber-500 focus:outline-none transition-all text-white">
-       </div>
-      </div>
-      <div><label for="message" class="block text-sm text-slate-400 mb-2" data-lang-key="form_message">Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 focus:border-amber-500 focus:outline-none transition-all text-white resize-none"></textarea>
-      </div><button type="submit" class="btn-gold w-full justify-center"> <span data-lang-key="form_submit">🚀 Send Message</span> </button>
-     </form>
     </div>
-   </div>
   </section><!-- Footer -->
   <footer class="py-12 text-center border-t border-slate-800">
-   <div class="max-w-7xl mx-auto px-6">
-    <p class="text-2xl font-heading font-bold gold-gradient mb-4">EMG</p>
-    <p class="text-slate-400 mb-4">© 2026 Eslam Mohamed Gamal. <span data-lang-key="footer_thanks">Thank you for visiting</span> 💛</p>
-    <p class="text-slate-500 text-sm">📍 <span data-lang-key="footer_location">Giza, Egypt</span></p>
-   </div>
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-2xl font-heading font-bold gold-gradient mb-4">EMG</p>
+      <p class="text-slate-400 mb-4">© 2026 Eslam Mohamed Gamal. <span data-lang-key="footer_thanks">Thank you for
+          visiting</span> 💛</p>
+      <p class="text-slate-500 text-sm">📍 <span data-lang-key="footer_location">Giza, Egypt</span></p>
+    </div>
   </footer><!-- Back to Top Button --> <button class="back-to-top" id="backToTop">↑</button> <!-- Toast Notification -->
   <div class="toast" id="toast"></div>
   <script>
@@ -1163,7 +1374,7 @@
       '2': null,
       '3': null
     };
-    
+
     // Language translations
     const translations = {
       en: {
@@ -1192,7 +1403,7 @@
         achievements_title: "Achievements",
         goal_title: "Career Goal",
         goal_desc: '"Support business decisions with advanced analytics and accurate reporting"',
-        experience_title: "Experience",
+        experience_title: "Professional Experience",
         exp1_title: "Freelance Data Analyst",
         exp1_date: "Current",
         exp1_desc: "Creating dashboards, data visualization, and business insights for various clients",
@@ -1265,7 +1476,23 @@
         footer_location: "Giza, Egypt",
         toast_email: "Email copied to clipboard!",
         toast_message: "Message sent successfully!",
-        toast_file: "File uploaded successfully!"
+        toast_file: "File uploaded successfully!",
+
+        project3_title: "Sales Performance Dashboard",
+        project3_tool: "Built with Excel",
+
+        sales_step1: "Cleaned and prepared sales dataset",
+        sales_step2: "Built PivotTables and KPIs",
+        sales_step3: "Designed interactive dashboard",
+
+        sales_insights: "💡 Key Insights:",
+
+        sales_insight1: "Total Sales exceeded $2.3M across all regions",
+        sales_insight2: "Profit reached $292K with a 12.56% profit margin",
+        sales_insight3: "West region generated the highest sales contribution",
+        sales_insight4: "Discount levels significantly impacted profitability"
+
+
       },
       ar: {
         nav_home: "الرئيسية",
@@ -1291,7 +1518,7 @@
         achievements_title: "الإنجازات",
         goal_title: "الهدف المهني",
         goal_desc: '"دعم قرارات الأعمال بالتحليلات المتقدمة والتقارير الدقيقة"',
-        experience_title: "الخبرة",
+        experience_title: "الخبرات المهنية",
         exp1_title: "محلل بيانات مستقل",
         exp1_date: "حالياً",
         exp1_desc: "إنشاء لوحات المعلومات وتصور البيانات ورؤى الأعمال للعملاء",
@@ -1364,7 +1591,23 @@
         footer_location: "الجيزة، مصر",
         toast_email: "تم نسخ البريد الإلكتروني!",
         toast_message: "تم إرسال الرسالة بنجاح!",
-        toast_file: "تم رفع الملف بنجاح!"
+        toast_file: "تم رفع الملف بنجاح!",
+
+        project3_title: "لوحة تحليل أداء المبيعات",
+        project3_tool: "تم إنشاؤها باستخدام Excel",
+
+        sales_step1: "تنظيف وتجهيز بيانات المبيعات",
+        sales_step2: "إنشاء PivotTables ومؤشرات الأداء",
+        sales_step3: "تصميم لوحة معلومات تفاعلية",
+
+        sales_insights: "💡 أهم النتائج:",
+
+        sales_insight1: "إجمالي المبيعات تجاوز 2.3 مليون دولار",
+        sales_insight2: "بلغ صافي الربح 292 ألف دولار بهامش ربح 12.56%",
+        sales_insight3: "حققت منطقة الغرب أعلى مساهمة في المبيعات",
+        sales_insight4: "كان للخصومات تأثير مباشر على الربحية",
+
+
       }
     };
 
@@ -1429,7 +1672,7 @@
     function toggleLanguage() {
       currentLang = currentLang === 'en' ? 'ar' : 'en';
       const html = document.documentElement;
-      
+
       if (currentLang === 'ar') {
         html.setAttribute('lang', 'ar');
         html.setAttribute('dir', 'rtl');
@@ -1439,7 +1682,7 @@
         html.setAttribute('dir', 'ltr');
         document.getElementById('langText').textContent = 'العربية';
       }
-      
+
       document.querySelectorAll('[data-lang-key]').forEach(el => {
         const key = el.getAttribute('data-lang-key');
         if (translations[currentLang][key]) {
@@ -1479,7 +1722,7 @@
           }
         });
       }, { threshold: 0.1 });
-      
+
       elements.forEach(el => observer.observe(el));
     }
 
@@ -1494,7 +1737,7 @@
           }
         });
       }, { threshold: 0.5 });
-      
+
       progressBars.forEach(bar => observer.observe(bar));
     }
 
@@ -1510,7 +1753,7 @@
 
       const hamburger = document.getElementById('hamburger');
       const mobileMenu = document.getElementById('mobileMenu');
-      
+
       hamburger.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
       });
@@ -1527,7 +1770,7 @@
       const profileImage = document.getElementById('profileImage');
 
       photoUpload.addEventListener('click', () => photoInput.click());
-      
+
       photoInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -1561,7 +1804,7 @@
         input.addEventListener('change', (e) => {
           const projectId = input.getAttribute('data-project');
           const file = e.target.files[0];
-          
+
           if (file) {
             const reader = new FileReader();
             reader.onload = (event) => {
@@ -1569,14 +1812,14 @@
                 name: file.name,
                 data: event.target.result
               };
-              
+
               const downloadBtn = document.querySelector(`.download-btn[data-project="${projectId}"]`);
               const fileName = document.querySelector(`.file-name[data-project="${projectId}"]`);
-              
+
               downloadBtn.classList.remove('hidden');
               fileName.classList.remove('hidden');
               fileName.textContent = '✅ ' + file.name;
-              
+
               showToast(translations[currentLang].toast_file);
             };
             reader.readAsDataURL(file);
@@ -1588,7 +1831,7 @@
         btn.addEventListener('click', () => {
           const projectId = btn.getAttribute('data-project');
           const fileData = projectFiles[projectId];
-          
+
           if (fileData) {
             const link = document.createElement('a');
             link.href = fileData.data;
@@ -1602,7 +1845,7 @@
         input.addEventListener('change', (e) => {
           const projectId = input.getAttribute('data-project');
           const file = e.target.files[0];
-          
+
           if (file && file.type.startsWith('image/')) {
             const reader = new FileReader();
             reader.onload = (event) => {
@@ -1610,7 +1853,7 @@
               preview.style.backgroundImage = `url('${event.target.result}')`;
               preview.classList.add('has-image');
               preview.innerHTML = '';
-              
+
               localStorage.setItem(`dashboard-${projectId}`, event.target.result);
               showToast(translations[currentLang].toast_file);
             };
@@ -1618,7 +1861,7 @@
           }
         });
       });
-      
+
       ['1', '2', '3'].forEach(projectId => {
         const saved = localStorage.getItem(`dashboard-${projectId}`);
         if (saved) {
@@ -1636,7 +1879,7 @@
       });
 
       const backToTop = document.getElementById('backToTop');
-      
+
       window.addEventListener('scroll', () => {
         if (window.scrollY > 500) {
           backToTop.classList.add('visible');
@@ -1670,5 +1913,7 @@
       });
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cbf2ff1849411a0',t:'MTc3MDc2NDA1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9cbf2ff1849411a0',t:'MTc3MDc2NDA1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
 </html>
